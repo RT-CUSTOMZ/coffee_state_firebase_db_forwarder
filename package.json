@@ -16,6 +16,7 @@
     "ajv": "^6.6.2",
     "eventemitter-ts": "0.0.4",
     "firebase-admin": "^6.2.0",
+    "moment": "^2.24.0",
     "mqtt": "^2.18.8"
   },
   "devDependencies": {

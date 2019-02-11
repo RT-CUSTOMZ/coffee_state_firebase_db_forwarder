@@ -1,8 +1,10 @@
 import {MqttClient} from "./mqttClient";
 
+const mqttHost = process.env.MQTT_HOST || 'ws://mqtt.42volt.de:9001/'
+
 console.log("Coffee state firebase db forwarder is starting")
 
-let mqttClient = new MqttClient('ws://mqtt.42volt.de:9001/');
+let mqttClient = new MqttClient(mqttHost);
 
 process.on('SIGTERM' || 'SIGINT', function () {
   console.log("Coffee state firebase db forwarder is shuting down")

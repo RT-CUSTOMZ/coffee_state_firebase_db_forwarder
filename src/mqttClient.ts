@@ -41,7 +41,7 @@ export class MqttClient  extends events.EventEmitter  {
 
             }
         }
-        else if(topic.endsWith("weight") ) {
+        else if(topic.endsWith("weight") && messageObj['state'].endsWith("CoffeePodPlaced") ) {
             try {
                 console.log("Refresh level in DB"); 
                 this.databaseConnector.sendLevelToAll(
